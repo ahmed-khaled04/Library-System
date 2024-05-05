@@ -62,7 +62,7 @@
     left: 5%;
 }
 
-.bookcard-category p{
+.bookcard-category span{
     padding: 8px 15px;
     background-color: lightgray;
     font-weight: 600;

@@ -4,8 +4,10 @@ import './Header.css'
 
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Header() {
+
 
     const [menutoggle, setMenutoggle] = useState(false)
 
@@ -16,6 +18,14 @@ function Header() {
     const closeMenu = () => {
         setMenutoggle(false)
     }
+    const handleInputChange = (e) => {
+        if(e.keyCode === 13){
+            e.preventDefault(); // Ensure it is only this code that runs
+            const q = e.target.value;
+            window.location.href = "http://127.0.0.1:3000/search/"+q;
+            
+        }
+    };
 
     return (
         <div className="header">
@@ -25,7 +35,7 @@ function Header() {
             </Link>
             </div>
             <div className='nav-right'>
-                <input className='search-input' type='text' placeholder='Search a Book'/>
+                <input onKeyUp={handleInputChange} className='search-input' type='text' placeholder='Search a Book'/>
                 <ul className={menutoggle ? "nav-options active" : "nav-options"}>
                     <li className="option" onClick={() => { closeMenu() }}>
                         <Link to='/'>

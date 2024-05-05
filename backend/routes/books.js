@@ -26,6 +26,29 @@ router.get("/getbook/:id", async (req, res) => {
     }
 })
 
+//get book By Name
+router.get("/getbooks", async (req, res) => {
+    try {
+        const books = await Book.find({}).populate("categories").populate("transactions");
+        console.log(books);
+        res.status(200).json(books)
+    }
+    catch {
+        return res.status(500).json(err)
+    }
+})
+
+//Search Book
+router.get("/search/:q", async (req, res) => {
+    try {
+        const books = await Book.find({ bookName: { $regex: req.params.q, $options: "i" } }).populate("categories").populate("transactions");
+        console.log(books);
+        res.status(200).json(books);
+    } catch (err) {
+        return res.status(500).json(err);
+    }
+});
+
 /* Get books by category name*/
 router.get("/", async (req, res) => {
     const category = req.query.category

@@ -2,15 +2,16 @@ import "./Allbooks.css";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function BooksPage() {
+function Search() {
   const [books, setBooks] = useState([]);
   const API_URL = process.env.REACT_APP_API_URL
-
+  const parts = document.URL.split('/');
+  
 
 
   useEffect(() => {
     axios
-      .get(API_URL + 'api/books/getbooks')
+      .get(API_URL + 'api/books/search/'+ parts.at(-1) )
       .then((response) => {
         setBooks(response.data);
         console.log(response.data[0].categories[0].categoryName)
@@ -50,4 +51,4 @@ function BooksPage() {
 
 
 
-export default BooksPage;
+export default Search;
