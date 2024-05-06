@@ -1,13 +1,8 @@
 ## Library Management System 📚
 
-A web app for managing all the activities of a library like managing members and book transactions, built on MERN Stack
-![1](https://user-images.githubusercontent.com/73348574/205624307-6a1b18fa-5ef7-4de9-b141-9225eca62c6c.png)
-
 ### Video Demo
 
 [Demo Link](https://drive.google.com/file/d/1gddUdOE41WaEyY4OWoJtDa0l6VJZTg94/view?usp=sharing)
-
-Show some ❤️ and 🌟 the repo to support the project
 
 ## Index ✏️
 
@@ -21,9 +16,7 @@ Show some ❤️ and 🌟 the repo to support the project
 - [Technologies 🛠](#technologies-)
 - [Screenshots](#screenshots)
 - [References 💻](#references-)
-- [Author 📝](#author-)
-- [Connect Me On 🌍](#connect-me-on-)
-- [License 🏆](#license-)
+- [Team 📝](#author-)
 
 ## Features Of LCMS 🚀
 
@@ -33,37 +26,36 @@ Show some ❤️ and 🌟 the repo to support the project
 - Adding Books with Available Copies
 - Issue and Return Transaction tracking of a Book by the Member
 - Reserving a book for specific dates
-- Showing the Achievements, Event Gallery
+- Search for books
+- View available books
+- View events
+- Apply for part-time jobs
+- View Cafe menu
 
 ## Setup 🔥
 
-- Fork the Repo
+1. Copy the file into an empty project
 
-- Clone the repo to your local machine
-  `git clone <repo-url>`
+2. Open in editor
 
 ### Frontend Setup 🍧
 
 1. Get into the chatapp directory
    `cd frontend`
 
-2. Run `yarn` to install dependencies
+2. Edit `.env` file and create variables as mentioned in the `.env.example` with the values appropriate for you
 
-3. Create a `.env` file and create variables as mentioned in the `.env.example` with the values
-
-4. Run `yarn start` to start the application
+3. Run `yarn start` to start the application
 
 ### Backend Setup 🍿
 
 1. Get into backend directory `cd backend`
 
-2. Run `yarn` to install dependencies
+2. Create a MongoDB account and get the MONOGO_URL for connecting the server and the Database
 
-3. Create a MongoDB account and get the MONOGO_URL for connecting the server and the Database
+3. Edit `.env` file and create variables as mentioned in the `.env.example` with the values appropriate for you
 
-4. Create a `.env` file and create variables as mentioned in the `.env.example` with the values
-
-5. Run `nodemon server.js` to start the server [Should have installed nodemon globally]
+4. Run `npm run devStart` to start the server [Should have installed nodemon globally]
 
 ## Technologies 🛠
 
@@ -88,15 +80,12 @@ Show some ❤️ and 🌟 the repo to support the project
 - [NodeJs Documentation](https://nodejs.org/en/docs/)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 
-## Author 📝
+## Team 📝
 
-- [@iampranavdhar](https://www.github.com/iampranavdhar)
+1. Abdallah Belal Momen
+2. Ahmed Khaled Hamdy
+3. Hagar Ahmed ElHishi
+4. Malak Mohammed Wagdy
+5. Malak Ossama Zaiter
+6. Mariam Ramy Ahab
 
-## Connect Me On 🌍
-
-[![twitter badge](https://img.shields.io/badge/twitter-Pranavdhar-0077b5?style=social&logo=twitter)](https://twitter.com/iampranavdhar)<br/>
-[![linkedin badge](https://img.shields.io/badge/linkedin-Pranavdhar-0077b5?style=social&logo=linkedin)](https://in.linkedin.com/in/sai-pranavdhar-reddy-nalamalapu-038104206)
-
-## License 🏆
-
-This repository is licensed under MIT License. Find [LICENSE](LICENSE) to know more
