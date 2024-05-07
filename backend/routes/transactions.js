@@ -40,6 +40,16 @@ router.get("/all-transactions", async (req, res) => {
     }
 })
 
+router.get("/books-on-hold", async (req, res) => {
+    try {
+        const transactions = await BookTransaction.find({transactionType: "Reserved"}).sort({ _id: -1 }).limit(6)
+        res.status(200).json(transactions)
+    }
+    catch (err) {
+        return res.status(504).json(err)
+    }
+})
+
 router.put("/update-transaction/:id", async (req, res) => {
     try {
         if (req.body.isAdmin) {
